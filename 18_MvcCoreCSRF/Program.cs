@@ -7,6 +7,8 @@ builder.Services.AddSession(options =>
     options.IdleTimeout = TimeSpan.FromMinutes(30);
 });
 
+builder.Services.AddAntiforgery();
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
